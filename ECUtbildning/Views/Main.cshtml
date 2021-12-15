@@ -1,0 +1,147 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c4707a38a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <title>FreakyFashion</title>
+</head>
+<body>
+    <div class="container">
+        <!-- -------------------------------------------------------------- -->
+        <!-- site-header -->
+        <!-- -------------------------------------------------------------- -->
+        <header class="site-header">
+            <nav class="navbar navbar-light">
+                <div style="justify-content:normal!important;" class="container-fluid">
+                    <a style="padding-right: 10px; font-size: 2.5rem; font-weight: 600; cursor: pointer;" class="navbar-brand"><span style="font-family: 'Cedarville Cursive', cursive;">Freaky</span><span style="font-family: 'Great Vibes', cursive;">Fashion</span></a>
+                    <form action="/search" class="d-flex">
+                        <input name="q" style="border-radius: 15px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; " class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button style="border-radius: 15px; border-bottom-left-radius: 0px; border-top-left-radius: 0px; " class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <main>
+
+            @RenderBody()
+
+        </main> <!-- -------------------------------------------------------------- -->
+        <!-- site-footer -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted">
+            <!-- Section: Social media -->
+            <section style="padding: 0 1.5rem!important;" class="d-flex justify-content-center justify-content-lg-around p-4 border-bottom">
+                <div style="align-items: center; display: flex;">
+                    <p style="padding-right: 3rem; font-size: 18px; color: black !important; margin-top: 16px; margin-bottom: 16px;">
+                        <i style="padding-right: 5px;" class="fas fa-globe-americas"></i> Gratis Frakt & Returer
+                    </p>
+                    <p style="padding-right: 3rem; font-size: 18px; color: black !important; margin-top: 16px; margin-bottom: 16px; ">
+                        <i style="padding-right: 5px;" class="fas fa-plane"></i> Expressfrakt
+                    </p>
+                    <p style="padding-right: 3rem; font-size: 18px; color: black !important; margin-top: 16px; margin-bottom: 16px; ">
+                        <i style="padding-right: 5px;" class="fas fa-shield-alt"></i> Säkra Betalning
+                    </p>
+                    <p style="padding-right: 3rem; font-size: 18px; color: black !important; margin-top: 16px; margin-bottom: 16px; ">
+                        <i style="padding-right: 5px;" class="far fa-grin-beam"></i> Nyheter Varje Dag
+                    </p>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Shopping
+                            </h6>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Vinterjackor</a>
+                            </p>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Pufferjackor</a>
+                            </p>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Kappa</a>
+                            </p>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Trenchcoats</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Mina Sidor
+                            </h6>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Mina Ordrar</a>
+                            </p>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Mitt Konto</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Kundtjänst
+                            </h6>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Returnpolicy</a>
+                            </p>
+                            <p>
+                                <a style="text-decoration: none;" href="#!" class="text-reset">Integritetspolicy</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Copyright - FreakyFashion
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+</body>
+</html>
+
+

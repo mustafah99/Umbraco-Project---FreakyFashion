@@ -1,0 +1,45 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.SearchPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core
+
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@inject IPublishedContentQuery _publishedContentQuery
+
+@{
+    Layout = "Main.cshtml";
+}
+
+@{
+    var searchQuery = HttpContextAccessor.HttpContext.Request.Query["q"];
+}
+
+@{
+    var searchResults = _publishedContentQuery.Search(searchQuery);
+}
+
+<h2 style="padding: 20px 0; text-align: center; font-weight: bolder;">@searchResults.Count() träffar på @searchQuery</h2>
+
+
+@foreach (var result in _publishedContentQuery.Search(searchQuery))
+{
+    var image = result.Content.Value<IPublishedContent>("heroImage");
+
+    <div class="card mb-3" style="max-width: 100%;">
+        <a style="color: black; text-decoration: none;" href="@result.Content.Url()">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="@image.Url()" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">@result.Content.Name()</h5>
+                        <p class="card-text">@result.Content.Value("productDescription")</p>
+                        <p class="card-text"><small class="text-muted">249 kr</small></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+}
+

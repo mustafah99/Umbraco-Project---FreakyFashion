@@ -1,0 +1,131 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+
+@*@{
+        var image = Model.Value<IPublishedContent>("heroImage");
+}*@
+
+<main>
+
+    <!-- -------------------------------------------------------------- -->
+    <!--                           hero                                 -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="hero">
+        <img src="https://via.placeholder.com/640x220?text=Hero"
+             alt=""
+             style="width: 100%" />
+        <div class="centered">
+            <h1>Lorem ipsum dolor</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus, nesciunt!
+            </p>
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------------------- -->
+    <!--                         course                                 -->
+    <!-- -------------------------------------------------------------- -->
+
+    <section class="course row">
+        <div class="col-8">
+            <h1>Om Webbutvecklare inom .NET</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                voluptas totam in, debitis provident accusamus repudiandae voluptatibus
+                expedita quasi temporibus?
+            </p>
+            <h2>Din framtida yrkesroll</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                voluptas totam in, debitis provident accusamus repudiandae voluptatibus
+                expedita quasi temporibus?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                voluptas totam in, debitis provident accusamus repudiandae voluptatibus
+                expedita quasi temporibus?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                voluptas totam in, debitis provident accusamus repudiandae voluptatibus
+                expedita quasi temporibus?
+            </p>
+        </div>
+        <div class="col-4">
+            <div class="quick-facts">
+                <div>
+                    <span class="label">Utbildningsstart</span>
+                    <span>HT 2022</span>
+                </div>
+                <div>
+                    <span class="label">Status</span>
+                    <span>Stängd för ansökan</span>
+                </div>
+                <div>
+                    <span class="label">Omfattning</span>
+                    <span>2 år</span>
+                </div>
+                <div>
+                    <span class="label">Studieform</span>
+                    <span>EC Stream</span>
+                </div>
+                <div>
+                    <span class="label">Studieort</span>
+                    <span>Helsingborg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="additional-details accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Behörighetskrav
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem corporis necessitatibus ab.
+                    Provident ex fugiat voluptatibus asperiores voluptatem. Debitis est et animi aliquid qui quis
+                    adipisci quisquam nesciunt saepe quam?
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Kurser
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kurs</th>
+                                <th>Poäng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <tr>
+                                <td>C#</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Datalagring</td>
+                                <td>40</td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

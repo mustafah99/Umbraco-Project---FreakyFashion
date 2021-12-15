@@ -1,0 +1,27 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+
+@{
+    var spotsEnumerable = Model.Value<IEnumerable<IPublishedElement>>("Spots");
+}
+
+<div style="padding: 20px 0;" class="card-group">
+
+    @foreach (var spotsContent in spotsEnumerable)
+    {
+        var image = spotsContent.Value<IPublishedContent>("SpotImage");
+
+        <div style="padding-right: 20px;" class="card">
+            <a style="text-decoration: none; color: black;" href="@spotsContent.Value("SpotLink")">
+                <img src="@image.Url()" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@spotsContent.Value("spotTitle")</h5>
+                    <p class="card-text">@spotsContent.Value("spotDescription")</p>
+                </div>
+            </a>
+        </div>
+
+    }
+</div>

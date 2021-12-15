@@ -1,0 +1,39 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Main.cshtml";
+}
+
+@{
+    var image = Model.Value<IPublishedContent>("heroImage");
+}
+
+<!-- -------------------------------------------------------------- -->
+<!--                           Hero                               -->
+
+@await Html.PartialAsync("Components/Hero")
+
+
+
+<!-- -------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+<!--                        Spots                              -->
+
+@await Html.PartialAsync("Spots")
+
+<!-- -------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+<!--                          Products                               -->
+
+@await Html.PartialAsync("Products")
+<!-- -------------------------------------------------------------- -->
+
+
+<style>
+    .card button:hover {
+        opacity: 0.7;
+    }
+</style>
+
+

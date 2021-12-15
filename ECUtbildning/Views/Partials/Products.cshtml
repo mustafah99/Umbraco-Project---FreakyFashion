@@ -1,0 +1,91 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@*<section class="courses">
+        <h2>@Model.Value("ourProductsHeading")</h2>
+        <div class="row">
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;" class="card">
+                <img src="https://via.placeholder.com/220x200?text=EC+Utbildning" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p style="color: grey; font-size: 22px;" class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button style="border: none; outline: 0; padding: 12px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">Add to Cart</button></p>
+            </div>
+        </div>
+    </section>*@
+
+
+@{
+    var content = Model.Value<IPublishedContent>("ourProductsProducts");
+}
+
+
+<section class="courses">
+    <h2>@Model.Value("ourProductsHeading")</h2>
+    <div class="row">
+        @foreach (var product in content.Children)
+        {
+            var image = product.Value<IPublishedContent>("heroImage");
+
+        <div class="card col-4 p-2">
+            <a style="text-decoration: none; color: black;" href="@product.Url()">
+                <img src="@image.Url()" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name<span style="font-weight: lighter;">- 249 kr</span></h5>
+                </div>
+            </a>
+        </div>
+        }
+
+    </div>
+</section>

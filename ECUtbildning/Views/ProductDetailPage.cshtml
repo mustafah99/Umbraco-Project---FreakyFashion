@@ -1,0 +1,27 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ProductDetailPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Main.cshtml";
+}
+
+<!-- -------------------------------------------------------------- -->
+<!--                           hero                                 -->
+<!-- -------------------------------------------------------------- -->
+@await Html.PartialAsync("Components/ProductsHero")
+
+<!-- -------------------------------------------------------------- -->
+<!--                         course                                 -->
+<!-- -------------------------------------------------------------- -->
+
+<section class="course row">
+    <div class="col-8">
+        @Model.Value("productDescription")
+    </div>
+</section>
+
+<h3 class="card-title">249 kr</h3>
+
+
+<button style="padding: 20px 50px; border: none; border-radius: 10px; margin: 15px 0; background-color: #56b4de; color: white; font-weight: 400; font-size: 20px; text-transform: uppercase;">Lägg Till i Varukorg</button>
+
